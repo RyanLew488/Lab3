@@ -14,10 +14,10 @@ Die::Die(int sides) {
 }
 
 
-int Die::roll(int numSides) {
+int Die::roll() {
 
 	int result;
-	result = (rand() % numSides) + 1; //rand() will be seeded in main
+	result = (rand() % sides) + 1; //rand() will be seeded in main
 	
 	return result;
 }

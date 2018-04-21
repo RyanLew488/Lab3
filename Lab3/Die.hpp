@@ -10,7 +10,7 @@ protected:
 public:
 	Die();
 	Die(int sides);
-	int roll(int numSides);
+	int roll();
 
 };
 

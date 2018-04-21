@@ -21,7 +21,6 @@ public:
 	Game();
 	void play();
 	void displayResults();
-	void checkWinner();
 	~Game();
 
 };

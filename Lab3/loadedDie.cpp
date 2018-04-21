@@ -1,5 +1,17 @@
 #include "loadedDie.hpp"
 
+loadedDie::loadedDie() {
+
+	sides = 24;
+
+}
+
+loadedDie::loadedDie(int sides) {
+
+	this->sides = sides;
+
+}
+
 int loadedDie::roll() {
 	
 	int result1 = 0;
@@ -15,6 +27,7 @@ int loadedDie::roll() {
 		}
 		return result1;
 	}
+
 	else {
 
 		if (result2 > sides) {

@@ -6,6 +6,7 @@
 class loadedDie : public Die {
 
 public:
+	loadedDie();
 	loadedDie(int sides);
 	int roll();
 	

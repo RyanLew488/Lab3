@@ -17,10 +17,12 @@ Game::Game() {
 
 void Game::play() {
 
-	p1Score = 0;
-	p2Score = 0;
+
 
 	while (yesNoValidation() == true) {
+
+		p1Score = 0;
+		p2Score = 0;
 
 		menu(p1Sides, p2Sides, numRounds, p1DieType, p2DieType);
 
@@ -47,45 +49,66 @@ void Game::play() {
 			p2 = new Die(p2Sides);
 
 		}
+
+		for (int i = 0; i < numRounds; i++) {
+
+			int p1Roll = 0;
+			int p2Roll = 0;
+			p1Roll = p1->roll();
+			p2Roll = p2->roll();
+
+			std::cout << "Player 1 rolled a: " << p1Roll << std::endl;
+			std::cout << "Player 2 rolled a: " << p2Roll << std::endl;
+
+			if (p1Roll > p2Roll) {
+
+				std::cout << "Player 1 wins the round" << std::endl;
+				p1Score++;
+
+			}
+
+			else if (p2Roll > p1Roll) {
+
+				std::cout << "Player 2 wins the round" << std::endl;
+				p2Score++;
+
+			}
+			else {
+
+				std::cout << "Round is a draw" << std::endl;
+
+			}	
+		}
+		displayResults();
 	}
 }
 
-void Game::checkWinner() {
-
-	for (int i = 0; i < numRounds; i++) {
-		int p1Roll = 0;
-		int p2Roll = 0;
-		p1Roll = p1->roll();
-		p2Roll = p2->roll();
-		
-		std::cout << "Player 1 rolled a: " << p1Roll << std::endl;
-		std::cout << "Player 2 rolled a: " << p2Roll << std::endl;
-
-		if (p1Roll > p2Roll) {
-
-			std::cout << "Player 1 wins the round" << std::endl;
-			p1Score++;
-
-		}
-		
-		else if (p2Roll < p1Roll) {
-
-			std::cout << "Player 2 wins the round" << std::endl;
-			p2Score++;
-
-		}
-		else {
-
-			std::cout << "Round is a draw" << std::endl;
-
-		}
-
-	}
-
-}
 void Game::displayResults() {
 	
-	std::cout << "displayResults() function running." << std::endl;
+	std::cout << "Player 1's final score: "<< p1Score << std::endl;
+	std::cout << "Player 1's die type: ";
+
+	if (p1DieType == 1) {
+		std::cout << "Loaded" << std::endl;
+	}
+	else {
+		std::cout << "Normal" << std::endl;
+	}
+
+	std::cout << "Player 2's final score: " << p2Score << std::endl;
+	std::cout << "Player 2's die type: ";
+
+	if (p2DieType == 1) {
+
+		std::cout << "Loaded" << std::endl;
+
+	}
+
+	else {
+
+		std::cout << "Normal" << std::endl;
+
+	}
 }
 
 Game::~Game() {
