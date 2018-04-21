@@ -1,0 +1,12 @@
+#include <string>
+
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 4/10/2018
+** Description: Header file for the helpful functions. Contains the
+**				function prototypes.
+*********************************************************************/
+void menu(int& p1ss, int& p2s, int& rounds, int& p1l, int& p2l);
+int iValid(std::string message);
+int iRangeValid(std::string message, int lowerBound, int upperBound);
+bool yesNoValidation();
