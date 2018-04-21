@@ -17,8 +17,8 @@ int loadedDie::roll() {
 	int result1 = 0;
 	int result2 = 0;
 
-	result1 = (rand() % sides) + static_cast<int>(sides / 2);
-	result2 = (rand() % sides) + static_cast<int>(sides / 2);
+	result1 = (rand() % sides) + static_cast<int>(sides / 2) + static_cast<int>(sides/4);
+	result2 = (rand() % sides) + static_cast<int>(sides / 2) + static_cast<int>(sides/4);
 
 	if (result1 > result2) {
 		
