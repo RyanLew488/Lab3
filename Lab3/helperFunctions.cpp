@@ -113,8 +113,8 @@ bool yesNoValidation() {
 void menu(int& p1s, int& p2s, int& rounds, int& p1Type, int& p2Type) {
 
 	std::cout << "How many rounds of war do you want to play?" << std::endl;
-	std::cout << "Please select between 1 and 100" << std::endl;
-	rounds = iRangeValid("", 1, 100);
+	std::cout << "Please select between 1 and 1000" << std::endl;
+	rounds = iRangeValid("", 1, 1000);
 
 	std::cout << "What kind of die should player 1 have?" << std::endl;
 	std::cout << "1: for loaded" << std::endl;
