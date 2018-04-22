@@ -6,7 +6,7 @@
 ** Description: Header file for the helpful functions. Contains the
 **				function prototypes.
 *********************************************************************/
-void menu(int& p1ss, int& p2s, int& rounds, int& p1Type, int& p2Type);
+void menu(int& p1s, int& p2s, int& rounds, int& p1Type, int& p2Type);
 int iValid(std::string message);
 int iRangeValid(std::string message, int lowerBound, int upperBound);
 bool yesNoValidation();

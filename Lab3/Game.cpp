@@ -1,7 +1,15 @@
+/*********************************************************************
+** Program name: Game.cpp
+** Author: Ryan Lew
+** Date: 4/20/2018
+** Description: Implementation file for the Game class. Has functions to
+**				play the game and display the game. Uses dynamic memory
+**				to allow the user to select what type of Die each player uses
+*********************************************************************/
+
 #include "Game.hpp"
 #include "helperFunctions.hpp"
 #include <iostream>
-
 
 Game::Game() {
 
@@ -16,16 +24,17 @@ Game::Game() {
 }
 
 void Game::play() {
-
-
-
-	while (yesNoValidation() == true) {
+	
+	while (yesNoValidation() == true) { //Loops until the user inputs n
 
 		p1Score = 0;
 		p2Score = 0;
 
 		menu(p1Sides, p2Sides, numRounds, p1DieType, p2DieType);
 
+/***************************************************************
+* ** This section allows the user to select each players ie type
+****************************************************************/
 		if (p1DieType == 1) {
 
 			p1 = new loadedDie(p1Sides);
@@ -39,7 +48,7 @@ void Game::play() {
 		}
 
 		if (p2DieType == 1) {
-
+			
 			p2 = new loadedDie(p2Sides);
 
 		}
@@ -50,13 +59,14 @@ void Game::play() {
 
 		}
 
-		for (int i = 0; i < numRounds; i++) {
+		for (int i = 0; i < numRounds; i++) { //individual game loop
 
 			int p1Roll = 0;
 			int p2Roll = 0;
+						
 			p1Roll = p1->roll();
 			p2Roll = p2->roll();
-
+			
 			std::cout << "Player 1 rolled a: " << p1Roll << std::endl;
 			std::cout << "Player 2 rolled a: " << p2Roll << std::endl;
 

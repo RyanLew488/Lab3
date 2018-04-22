@@ -74,6 +74,10 @@ int iRangeValid(std::string message, int lowerBound, int upperBound) {
 	return validInteger;
 }
 
+/*********************************************************************
+** Description: This function only accepts Y/y or N/n as a valid input.
+*********************************************************************/
+
 bool yesNoValidation() {
 
 	bool answer = false;

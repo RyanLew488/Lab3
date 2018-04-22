@@ -1,3 +1,10 @@
+/*********************************************************************
+** Program name: Die.hpp
+** Author: Ryan Lew
+** Date: 4/20/2018
+** Description: Header file for the Die class.
+*********************************************************************/
+
 #ifndef DIE_HPP
 #define DIE_HPP
 
@@ -10,7 +17,7 @@ protected:
 public:
 	Die();
 	Die(int sides);
-	int roll();
+	virtual int roll();
 
 };
 

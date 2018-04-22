@@ -1,3 +1,10 @@
+/*********************************************************************
+** Program name: Game.hpp
+** Author: Ryan Lew
+** Date: 4/20/2018
+** Description: Header file for the Game class.
+*********************************************************************/
+
 #ifndef GAME_HPP
 #define GAME_HPP
 #include "loadedDie.hpp"
